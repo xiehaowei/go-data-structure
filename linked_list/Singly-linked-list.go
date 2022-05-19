@@ -99,24 +99,22 @@ func (l *SinglyLinkedList) Range() {
 		fmt.Println("This is an empty list")
 		return
 	}
-	fmt.Println("-------start----------","size:",l.Len())
+	fmt.Println("-------start----------", "size:", l.Len())
 	current := l.Head.Next
 	i := 0
 	for current.Next != nil {
-		if i > 6{
+		if i > 6 {
 			break
 		}
-		fmt.Printf("%+v \n",current)
+		fmt.Printf("%+v \n", current)
 		current = current.Next
 		i++
 	}
-	fmt.Printf("%+v \n",current)
+	fmt.Printf("%+v \n", current)
 	fmt.Println("-------end----------")
-	return
-
 }
 
-func (l *SinglyLinkedList)Reverse()  {
+func (l *SinglyLinkedList) Reverse() {
 	if l.Len() == 0 {
 		fmt.Println("This is an empty list")
 		return
